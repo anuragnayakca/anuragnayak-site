@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<div class="post-progress" aria-hidden="true" role="progressbar" style="position:fixed;top:72px;left:0;height:2px;background:var(--gold);z-index:400;width:0%;transition:width .1s"></div>
+
+<article itemscope itemtype="https://schema.org/Article">
+  <div style="background:var(--navy);padding:88px 0 64px;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:64px 64px;pointer-events:none"></div>
+    <div class="container" style="position:relative;z-index:1">
+      <span class="eyebrow">{{ page.category | default: 'Insights' }}</span>
+      <h1 itemprop="headline" style="font-family:'Playfair Display',serif;font-size:clamp(30px,4.5vw,52px);font-weight:700;color:#fff;max-width:780px;line-height:1.15;margin-bottom:20px">{{ page.title }}</h1>
+      <div style="width:48px;height:2px;background:var(--gold);margin-bottom:20px"></div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.35)">
+        <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        <span>·</span>
+        <span>{{ page.read_time | default: '5 min read' }}</span>
+        <span>·</span>
+        <span itemprop="author">Anurag Nayak</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="padding:72px 0;background:var(--white)">
+    <div class="container">
+      <div class="post-body" itemprop="articleBody" style="max-width:740px;font-size:18px;line-height:1.85;color:var(--mid)">
+        {{ content }}
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:52px;padding-top:32px;border-top:1px solid var(--border)">
+        <a href="/blog" class="btn btn-navy">← Back to Insights</a>
+        <a href="/#book" class="btn btn-gold">Book a Complimentary Call →</a>
+      </div>
+    </div>
+  </section>
+</article>
+
+<script>
+  const bar = document.querySelector('.post-progress');
+  if(bar) window.addEventListener('scroll',()=>{
+    const d=document.documentElement;
+    bar.style.width=Math.min(d.scrollTop/(d.scrollHeight-d.clientHeight)*100,100)+'%';
+  },{passive:true});
+</script>

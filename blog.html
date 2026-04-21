@@ -1,0 +1,50 @@
+---
+layout: default
+title: Insights
+description: Plain-language articles on insurance, corporate planning, and financial security for incorporated professionals and business owners in Canada. Published weekly.
+permalink: /blog/
+---
+
+<div style="background:var(--navy);padding:88px 0 72px;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:64px 64px;pointer-events:none"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <span class="eyebrow">Insights</span>
+    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,56px);font-weight:700;color:#fff;margin-bottom:20px">Plain talk on financial protection</h1>
+    <div style="width:48px;height:2px;background:var(--gold);margin-bottom:20px"></div>
+    <p style="font-size:18px;color:rgba(255,255,255,.5);max-width:520px;line-height:1.75">Practical articles on insurance, corporate planning, and financial security — written for incorporated professionals and business owners. Published weekly, no jargon.</p>
+  </div>
+</div>
+
+<section style="padding:80px 0;background:var(--white)">
+  <div class="container">
+
+    {% if site.posts.size > 0 %}
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px" class="blog-grid-responsive">
+      {% for post in site.posts %}
+      <a href="{{ post.url }}" style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px 24px;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:box-shadow .25s,transform .25s,border-color .25s" class="ins-card">
+        <span class="cat">{{ post.category | default: 'Insights' }}</span>
+        <h2 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;line-height:1.25;margin-bottom:12px;color:var(--navy)">{{ post.title }}</h2>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;flex:1;margin-bottom:16px">{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <div style="font-size:12px;color:var(--muted);display:flex;gap:8px;padding-top:14px;border-top:1px solid var(--border);margin-top:auto">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          <span>·</span>
+          <span>{{ post.read_time | default: '5 min read' }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    {% else %}
+    <div style="text-align:center;padding:72px 20px;max-width:520px;margin:0 auto">
+      <p style="font-size:17px;color:var(--muted);line-height:1.75">Articles are on the way. Check back weekly for plain-language insights on insurance, corporate planning, and financial protection for incorporated professionals.</p>
+      <a href="/#book" class="btn btn-gold" style="margin-top:28px">Book a Complimentary Call →</a>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<style>
+@media(max-width:900px){.blog-grid-responsive{grid-template-columns:1fr 1fr !important}}
+@media(max-width:600px){.blog-grid-responsive{grid-template-columns:1fr !important}}
+</style>

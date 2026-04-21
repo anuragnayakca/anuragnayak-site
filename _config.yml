@@ -1,0 +1,12 @@
+title: Anurag Nayak — Financial Security Advisor
+email: contact@anuragnayak.ca
+description: Financial security strategies for incorporated tech professionals, business owners and high-income families in BC, Alberta and Ontario.
+baseurl: ""
+url: "https://anuragnayak.ca"
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap

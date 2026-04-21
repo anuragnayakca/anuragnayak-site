@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary SEO -->
+  <title>{% if page.title and page.title != 'Home' %}{{ page.title }} | {% endif %}Anurag Nayak — Financial Security Advisor</title>
+  <meta name="description" content="{{ page.description | default: 'Financial security strategies for incorporated tech professionals, business owners and high-income families in BC, Alberta and Ontario. 20+ years corporate technology background.' }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta name="author" content="Anurag Nayak">
+  <meta name="geo.region" content="CA-BC">
+  <meta name="geo.placename" content="Vancouver Island, British Columbia">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="{{ page.url | absolute_url }}">
+  <meta property="og:title"       content="{{ page.title | default: 'Anurag Nayak — Financial Security Advisor' }}">
+  <meta property="og:description" content="{{ page.description | default: 'Financial security strategies for incorporated tech professionals, business owners and high-income families.' }}">
+  <meta property="og:site_name"   content="Anurag Nayak Financial Services">
+  <meta property="og:locale"      content="en_CA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="{{ page.title | default: 'Anurag Nayak — Financial Security Advisor' }}">
+  <meta name="twitter:description" content="{{ page.description | default: 'Financial security for incorporated tech professionals and business owners.' }}">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "Anurag Nayak Financial Services",
+    "url": "https://anuragnayak.ca",
+    "email": "contact@anuragnayak.ca",
+    "description": "Life insurance, disability insurance, critical illness insurance, corporate-owned life insurance (COLI), and investment planning for incorporated tech professionals and business owners.",
+    "founder": {
+      "@type": "Person",
+      "name": "Anurag Nayak",
+      "jobTitle": "Financial Security Advisor",
+      "description": "Licensed financial security advisor with 20+ years of corporate technology and VP-level leadership experience.",
+      "sameAs": [
+        "https://linkedin.com/in/anuragnayakfs",
+        "https://www.facebook.com/anuragnayakfs/"
+      ]
+    },
+    "areaServed": [
+      { "@type": "Province", "name": "British Columbia" },
+      { "@type": "Province", "name": "Alberta" },
+      { "@type": "Province", "name": "Ontario" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "BC",
+      "addressCountry": "CA",
+      "addressLocality": "Vancouver Island"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@anuragnayak.ca",
+      "contactType": "Customer Service",
+      "availableLanguage": "English"
+    },
+    "serviceType": [
+      "Life Insurance",
+      "Disability Insurance",
+      "Critical Illness Insurance",
+      "Corporate-Owned Life Insurance",
+      "Segregated Funds",
+      "Estate Planning"
+    ]
+  }
+  </script>
+
+  {% if page.layout == 'post' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title | escape }}",
+    "description": "{{ page.description | escape }}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "author": { "@type": "Person", "name": "Anurag Nayak" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Anurag Nayak Financial Services",
+      "url": "https://anuragnayak.ca"
+    }
+  }
+  </script>
+  {% endif %}
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  {% seo %}
+</head>
+<body>
+
+<a class="skip-nav" href="#main-content" style="position:absolute;top:-100%;left:12px;background:var(--gold);color:var(--navy);padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;z-index:9999;transition:top .2s">Skip to main content</a>
+
+<!-- Navigation -->
+<nav class="site-nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-in">
+    <a href="/" class="nav-logo" aria-label="Anurag Nayak — Home">Anurag Nayak</a>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="/#who">Who I Help</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/blog">Insights</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <li><a href="/#book" class="cta">Book a Call</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true" role="region" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="/#who">Who I Help</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/blog">Insights</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <li><a href="/#book">Book a Complimentary Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main id="main-content">
+  {{ content }}
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <a href="/" class="footer-logo">Anurag Nayak</a>
+        <p>Financial security strategies for incorporated professionals, business owners, and high-income families. Serving BC, Alberta, and Ontario — virtually from anywhere.</p>
+        <div class="f-social">
+          <a href="https://linkedin.com/in/anuragnayakfs" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+          <a href="https://www.facebook.com/anuragnayakfs/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+        </div>
+      </div>
+
+      <div>
+        <span class="f-title">Navigate</span>
+        <ul>
+          <li><a href="/#who">Who I Help</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#how">How It Works</a></li>
+          <li><a href="/blog">Insights</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="f-title">Services</span>
+        <ul>
+          <li><a href="/#services">Life Insurance</a></li>
+          <li><a href="/#services">Critical Illness</a></li>
+          <li><a href="/#services">Disability Insurance</a></li>
+          <li><a href="/#services">Corporate Insurance</a></li>
+          <li><a href="/#services">Segregated Funds</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="f-title">Licensed In</span>
+        <ul>
+          <li><a href="#">British Columbia</a></li>
+          <li><a href="#">Alberta</a></li>
+          <li><a href="#">Ontario</a></li>
+        </ul>
+        <span class="f-title" style="margin-top:24px">Contact</span>
+        <ul>
+          <li><a href="mailto:contact@anuragnayak.ca">contact@anuragnayak.ca</a></li>
+          <li><a href="/#book">Book a call</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-btm">
+      <p class="disclaimer">Anurag Nayak is a licensed life and living benefits insurance advisor in British Columbia, Alberta, and Ontario. This website is for general informational purposes only and does not constitute financial, legal, or insurance advice. All insurance products are subject to underwriting approval by the applicable insurer. Please consult a qualified advisor before making any financial decision.</p>
+      <p class="copy">&copy; {{ site.time | date: '%Y' }} Anurag Nayak Financial Services. All rights reserved. | <a href="/privacy" style="color:rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.08)">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie Consent -->
+<div class="cookie" id="cookie" role="alert" aria-live="polite">
+  <div class="cookie-in">
+    <p class="cookie-txt">This website uses cookies to improve your experience. By using this site, you agree to our <a href="/privacy">Privacy Policy</a>. We do not sell or share your personal information.</p>
+    <div class="cookie-acts">
+      <button class="c-accept" id="ca">Accept</button>
+      <button class="c-decline" id="cd">Decline</button>
+    </div>
+  </div>
+</div>
+
+<!-- Zoho Bookings Floating Button -->
+<script src="https://bookings.nimbuspop.com/assets/embed.js"></script>
+<script>
+  Bookings.buttonModal({
+    url: "https://contact-anuragnayak.zohobookings.ca/portal-embed#/discovery",
+    text: "Book now",
+    color: "#0a1628",
+    textColor: "#c9a84c",
+    position: "bottom-right"
+  });
+</script>
+
+<!-- Main JS -->
+<script src="/assets/js/main.js" defer></script>
+
+</body>
+</html>
