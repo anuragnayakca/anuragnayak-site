@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <!-- Primary SEO -->
   <title>{% if page.title and page.title != 'Home' %}{{ page.title }} | {% endif %}Anurag Nayak — Financial Security Advisor</title>
@@ -225,6 +227,18 @@
 
 <!-- Main JS -->
 <script src="/assets/js/main.js" defer></script>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function() {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
