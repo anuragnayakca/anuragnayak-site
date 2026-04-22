@@ -1,4 +1,5 @@
 (function(){
+  'use strict';
 
   // Nav scroll
   const nav = document.getElementById('nav');
@@ -23,12 +24,24 @@
     });
   }
 
-  // Service tabs
+  // Desktop service tabs
   document.querySelectorAll('.tab-btn').forEach(btn=>{
     btn.addEventListener('click',()=>{
       const t=btn.dataset.tab;
       document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.toggle('active',b.dataset.tab===t);b.setAttribute('aria-selected',String(b.dataset.tab===t))});
       document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===t));
+    });
+  });
+
+  // Mobile accordion
+  document.querySelectorAll('.acc-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const targetId=btn.dataset.acc;
+      const targetBody=document.getElementById(targetId);
+      const isOpen=btn.classList.contains('open');
+      document.querySelectorAll('.acc-btn').forEach(b=>{b.classList.remove('open');b.setAttribute('aria-expanded','false');});
+      document.querySelectorAll('.acc-body').forEach(b=>b.classList.remove('open'));
+      if(!isOpen&&targetBody){btn.classList.add('open');btn.setAttribute('aria-expanded','true');targetBody.classList.add('open');}
     });
   });
 
