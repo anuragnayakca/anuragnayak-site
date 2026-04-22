@@ -4,6 +4,48 @@ title: Home
 description: Financial security strategies for incorporated tech professionals, business owners and high-income families in BC, Alberta and Ontario. Licensed advisor with 20+ years corporate technology background.
 ---
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anurag Nayak — Financial Security Advisor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a href="#" class="nav-logo">Anurag Nayak</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#who">Who I Help</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#book" class="cta">Book a Call</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <ul>
+      <li><a href="#who">Who I Help</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#book">Book a Complimentary Call</a></li>
+    </ul>
+  </div>
+</nav>
+
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-grid"></div>
@@ -133,7 +175,9 @@ description: Financial security strategies for incorporated tech professionals, 
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
-    <div class="svc-layout">
+
+    <!-- DESKTOP two-column tabs (CSS hides this on mobile) -->
+    <div class="svc-desktop">
       <div class="svc-intro" data-r="l">
         <span class="eyebrow">What I help with</span>
         <h2>Comprehensive protection, for every stage</h2>
@@ -147,7 +191,7 @@ description: Financial security strategies for incorporated tech professionals, 
           <button class="tab-btn" role="tab" data-tab="inv" aria-selected="false"><div class="tab-bar"></div><span class="tab-num">05</span><span class="tab-name">Investments &amp; Seg Funds</span><span class="tab-arr">›</span></button>
         </nav>
       </div>
-      <div>
+      <div class="svc-panels">
         <div class="panel active" id="life" role="tabpanel">
           <div class="panel-hero">
             <div class="panel-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 3L5 8v9c0 6.6 4.6 11.8 11 13.5 6.4-1.7 11-6.9 11-13.5V8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 17l4.5 4.5 7-7" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -215,6 +259,25 @@ description: Financial security strategies for incorporated tech professionals, 
         </div>
       </div>
     </div>
+
+    <!-- MOBILE accordion (CSS hides this on desktop) -->
+    <div class="svc-mobile">
+      <span class="eyebrow">What I help with</span>
+      <h2 style="font-size:clamp(26px,7vw,36px);margin-bottom:12px">Comprehensive protection, for every stage</h2>
+      <div class="divider"></div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:28px">From personal insurance to corporate structures — strategies that work together.</p>
+
+      <div class="acc-item"><button class="acc-btn open" data-acc="acc-life" aria-expanded="true"><div class="acc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6.5v7C3 18.4 6.9 22.3 12 24c5.1-1.7 9-5.6 9-10.5v-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 12.5l3 3 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="acc-title">Life Insurance</span><span class="acc-chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="acc-body open" id="acc-life"><p class="acc-desc">Term, whole life, and UL strategies for personal and corporate needs — protecting income, building an estate, or creating a tax-efficient vehicle inside your corporation.</p><div class="acc-cards"><div class="acc-card"><p class="plabel">Personal</p><p>Term for income replacement. Permanent for estate planning.</p></div><div class="acc-card"><p class="plabel">Corporate (COLI)</p><p>Corporation owns the policy. Death benefit flows tax-free through the CDA.</p></div><div class="acc-card"><p class="plabel">Estate Planning</p><p>One of the most tax-efficient ways to transfer wealth to the next generation.</p></div><div class="acc-card"><p class="plabel">Key-Person</p><p>Protects the business from loss of a critical person. Funds buy-sell agreements.</p></div></div></div></div>
+
+      <div class="acc-item"><button class="acc-btn" data-acc="acc-ci" aria-expanded="false"><div class="acc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M5 12h3l2-5 3 10 2.5-7 2 3.5 1-1.5H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="acc-title">Critical Illness</span><span class="acc-chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="acc-body" id="acc-ci"><p class="acc-desc">A tax-free lump sum paid on diagnosis — no restrictions on how you use it. Financial freedom when health becomes the priority.</p><div class="acc-cards"><div class="acc-card"><p class="plabel">Tax-Free Lump Sum</p><p>$100K to $2M+ on diagnosis. No receipts, no restrictions.</p></div><div class="acc-card"><p class="plabel">Return of Premium</p><p>Premiums returned if you never claim.</p></div><div class="acc-card"><p class="plabel">No Use Restrictions</p><p>Mortgage, treatment, childcare, lost income — your choice.</p></div><div class="acc-card"><p class="plabel">26+ Conditions</p><p>Far more than the big three.</p></div></div></div></div>
+
+      <div class="acc-item"><button class="acc-btn" data-acc="acc-di" aria-expanded="false"><div class="acc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="8" y="2" width="8" height="10" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 22c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><span class="acc-title">Disability Insurance</span><span class="acc-chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="acc-body" id="acc-di"><p class="acc-desc">For incorporated professionals without group benefits, disability insurance is your most critical coverage. Protects your income when you can't work.</p><div class="acc-cards"><div class="acc-card"><p class="plabel">Own-Occupation</p><p>Pays if you can't do your specific job — not just "any job."</p></div><div class="acc-card"><p class="plabel">No Group Benefits</p><p>Individual DI is the only safety net for self-employed professionals.</p></div><div class="acc-card"><p class="plabel">Benefit Periods</p><p>2 years, 5 years, or to age 65.</p></div><div class="acc-card"><p class="plabel">Business Overhead</p><p>Covers fixed business costs while you recover.</p></div></div></div></div>
+
+      <div class="acc-item"><button class="acc-btn" data-acc="acc-coli" aria-expanded="false"><div class="acc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 11V8a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.5"/></svg></div><span class="acc-title">Corporate Insurance (COLI)</span><span class="acc-chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="acc-body" id="acc-coli"><p class="acc-desc">Fund premiums with corporate dollars, grow capital tax-sheltered, and distribute death benefits tax-free through the Capital Dividend Account.</p><div class="acc-cards"><div class="acc-card"><p class="plabel">Tax-Efficient</p><p>Funded at the small business rate — far cheaper than personally.</p></div><div class="acc-card"><p class="plabel">CDA Tax-Free</p><p>Death benefits paid as tax-free capital dividends.</p></div><div class="acc-card"><p class="plabel">Retained Earnings</p><p>Tax-advantaged destination for accumulated corporate earnings.</p></div><div class="acc-card"><p class="plabel">Honest Fit</p><p>Not right for everyone — we'll tell you directly either way.</p></div></div></div></div>
+
+      <div class="acc-item"><button class="acc-btn" data-acc="acc-inv" aria-expanded="false"><div class="acc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 18l5-7 4.5 5 4-9L21 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 21h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><span class="acc-title">Investments &amp; Seg Funds</span><span class="acc-chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="acc-body" id="acc-inv"><p class="acc-desc">Investment growth with insurance-backed protections — maturity guarantees, creditor protection, and bypass of probate.</p><div class="acc-cards"><div class="acc-card"><p class="plabel">Creditor Protection</p><p>Assets shielded from creditors — relevant for business owners.</p></div><div class="acc-card"><p class="plabel">Guarantees</p><p>75–100% of deposits guaranteed at maturity or death.</p></div><div class="acc-card"><p class="plabel">Bypass Probate</p><p>Beneficiaries receive funds directly — faster, cheaper, private.</p></div><div class="acc-card"><p class="plabel">All Account Types</p><p>RRSP, TFSA, or non-registered — we find the right structure.</p></div></div></div></div>
+    </div>
+
   </div>
 </section>
 
@@ -346,7 +409,7 @@ description: Financial security strategies for incorporated tech professionals, 
         <div class="bc-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><rect x="3" y="6" width="28" height="23" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M3 13h28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 4v5M23 4v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="9" y="19" width="4" height="4" rx="1" fill="currentColor" opacity=".35"/><rect x="15" y="19" width="4" height="4" rx="1" fill="currentColor" opacity=".35"/><rect x="21" y="19" width="4" height="4" rx="1" fill="currentColor" opacity=".35"/></svg></div>
         <h3>Book a Complimentary Call</h3>
         <p>Pick a time that works for you. No back and forth, no obligation.</p>
-        
+        <script src="https://bookings.nimbuspop.com/assets/embed.js"></script>
         <div id="inline-container" style="margin-top:8px;border-radius:var(--r);overflow:hidden"></div>
         <script>
           window.addEventListener('load', function() {
@@ -432,7 +495,72 @@ description: Financial security strategies for incorporated tech professionals, 
   </div>
 </section>
 
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="footer-logo">Anurag Nayak</a>
+        <p>Financial security strategies for incorporated professionals, business owners, and high-income families. Serving BC, Alberta, and Ontario — virtually from anywhere.</p>
+        <div class="f-social">
+          <a href="https://linkedin.com/in/anuragnayakfs" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+          <a href="https://www.facebook.com/anuragnayakfs/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+        </div>
+      </div>
+      <div>
+        <span class="f-title">Navigate</span>
+        <ul>
+          <li><a href="#who">Who I Help</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="/blog">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="f-title">Services</span>
+        <ul>
+          <li><a href="#services">Life Insurance</a></li>
+          <li><a href="#services">Critical Illness</a></li>
+          <li><a href="#services">Disability Insurance</a></li>
+          <li><a href="#services">Corporate Insurance</a></li>
+          <li><a href="#services">Segregated Funds</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="f-title">Licensed In</span>
+        <ul>
+          <li><a href="#">British Columbia</a></li>
+          <li><a href="#">Alberta</a></li>
+          <li><a href="#">Ontario</a></li>
+        </ul>
+        <span class="f-title" style="margin-top:24px">Contact</span>
+        <ul>
+          <li><a href="mailto:contact@anuragnayak.ca">contact@anuragnayak.ca</a></li>
+          <li><a href="#book">Book a call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-btm">
+      <p class="disclaimer">Anurag Nayak is a licensed life and living benefits insurance advisor in British Columbia, Alberta, and Ontario. This website is for general informational purposes only and does not constitute financial, legal, or insurance advice. All insurance products are subject to underwriting approval. Please consult a qualified advisor before making any financial decision.</p>
+      <p class="copy">© 2026 Anurag Nayak Financial Services. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 
-
-
+<!-- COOKIE BANNER -->
+<div class="cookie" id="cookie">
+  <div class="cookie-in">
+    <p class="cookie-txt">This website uses cookies to improve your experience. By using this site, you agree to our <a href="#">Privacy Policy</a>. We do not sell or share your personal information.</p>
+    <div class="cookie-acts">
+      <button class="c-accept" id="ca">Accept</button>
+      <button class="c-decline" id="cd">Decline</button>
+    </div>
+  </div>
 </div>
+
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>
