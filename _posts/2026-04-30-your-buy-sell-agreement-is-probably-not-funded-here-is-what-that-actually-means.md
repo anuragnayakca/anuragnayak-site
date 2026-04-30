@@ -7,7 +7,7 @@ description: If your business partner died tomorrow, do you have the money ready
 category: Corporate Insurance
 read_time: 5 min read
 ---
-![](/assets/images/uploads/blog_img_hero.png)
+![](/assets/images/uploads/bs2_blog_hero.png)
 
 Here is a question most incorporated business owners have never been asked directly:
 
@@ -27,7 +27,7 @@ Those are important questions. But notice what the agreement does not answer: wh
 
 That is the gap. A shareholder agreement without a funding mechanism is like a fire evacuation plan with no exits. The plan exists on paper. It just does not execute when you need it to.
 
-![](/assets/images/uploads/blog_img_hero.png)
+![](/assets/images/uploads/bs2_blog_scenario1.png)
 
 ## **Scenario 1: The Partner Death Nobody Was Ready For**
 
@@ -58,7 +58,7 @@ That sounds reasonable. In practice it means nothing.
 
 A disability buy-out insurance policy linked directly to the shareholder agreement would have funded this transition cleanly. For a 48-year-old non-smoker, a $1.5 million disability buy-out policy typically costs between $8,000 and $14,000 annually depending on the elimination period and benefit definition. For a business generating $4.5 million in enterprise value, that cost is a rounding error.
 
-![](/assets/images/uploads/blog_img_scenario2.png)
+![](/assets/images/uploads/bs2_blog_scenario2.png)
 
 *The gap was not the agreement. It was the assumption that the money would somehow be available when it was needed.*
 
@@ -74,7 +74,7 @@ If something happens to either partner today, the insurance pays $800,000 toward
 
 This is one of the most common gaps I encounter. A plan that was correct at one point in time but has since been made obsolete by business growth. Nobody flagged it. Nobody reviewed it.
 
-![](/assets/images/uploads/blog_img_scenario3.png)
+![](/assets/images/uploads/bs2_blog_scenario3.png)
 
 *A funded buy-sell agreement is not a one-time setup. It needs to be reviewed every two to three years, or whenever the business valuation changes materially.*
 
@@ -100,7 +100,7 @@ Key person loss was almost always treated as an HR problem, not a financial one.
 
 ## **Three Questions Worth Answering Today**
 
-![](/assets/images/uploads/blog_img_cta.png)
+![](/assets/images/uploads/bs2_blog_cta.png)
 
 If you are incorporated and you have a business partner, start here:
 
