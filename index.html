@@ -414,15 +414,13 @@ description: Financial security strategies for incorporated tech professionals, 
         <script src="https://bookings.nimbuspop.com/assets/embed.js"></script>
         <div id="inline-container" style="margin-top:8px;border-radius:var(--r);overflow:hidden"></div>
         <script>
-          window.addEventListener('load', function() {
-            if (typeof Bookings !== 'undefined') {
-              Bookings.inlineEmbed({
-                url: "https://contact-anuragnayak.zohobookings.ca/portal-embed#/discovery",
-                parent: "#inline-container",
-                height: "600px"
-              });
-            }
-          });
+          window.onload = function() {
+            Bookings.inlineEmbed({
+              url: "https://booknow.anuragnayak.ca/portal-embed#/discovery",
+              parent: "#inline-container",
+              height: "600px"
+            });
+          };
         </script>
       </div>
     </div>
